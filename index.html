@@ -2,30 +2,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Developer Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #101827;
-      color: white;
-      text-align: center;
-      padding: 70px 20px;
-    }
-    h1 { color: #60a5fa; }
-    p { line-height: 1.7; }
-    a { color: #93c5fd; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090f1e">
+<meta name="description" content="Khaled Al Ali — exploring technology, computer science and artificial intelligence.">
+<title>Khaled Al Ali | Developer Portfolio</title>
+<style>
+:root {
+  --bg:#090f1e;
+  --panel:#121e32;
+  --text:#eef5ff;
+  --muted:#9baec8;
+  --accent:#62d5ff;
+  --line:#263750;
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:system-ui,-apple-system,Segoe UI,sans-serif;
+  line-height:1.7;
+}
+a {color:inherit;text-decoration:none}
+.container {max-width:1050px;margin:auto;padding:0 24px}
+nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:24px 0;
+  gap:15px;
+}
+.logo {font-size:21px;font-weight:800}
+.logo span,.accent {color:var(--accent)}
+.links {display:flex;gap:22px;font-size:14px;color:var(--muted)}
+.links a:hover {color:var(--accent)}
+.hero {
+  min-height:75vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+}
+.eyebrow {
+  color:var(--accent);
+  letter-spacing:2px;
+  font-size:13px;
+  font-weight:700;
+  text-transform:uppercase;
+}
+h1 {
+  font-size:clamp(45px,8vw,85px);
+  line-height:1.1;
+  letter-spacing:-3px;
+  margin:12px 0 22px;
+}
+.hero p {max-width:610px;color:var(--muted);font-size:18px}
+.buttons {display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn {
+  display:inline-block;
+  padding:12px 22px;
+  border-radius:10px;
+  font-weight:650;
+  border:1px solid var(--line);
+}
+.primary {background:var(--accent);color:#071322;border-color:var(--accent)}
+.btn:hover {transform:translateY(-2px);transition:.2s}
+section {padding:65px 0}
+h2 {font-size:32px;letter-spacing:-1px;margin:0 0 20px}
+.description {max-width:750px;color:var(--muted)}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:18px;
+  margin-top:28px;
+}
+.card {
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:26px;
+  transition:transform .2s,border-color .2s;
+}
+.card:hover {transform:translateY(-4px);border-color:var(--accent)}
+.card .symbol {font-size:30px}
+.card h3 {margin:14px 0 8px}
+.card p {color:var(--muted);font-size:15px;margin:0}
+footer {
+  border-top:1px solid var(--line);
+  padding:30px 0;
+  text-align:center;
+  color:var(--muted);
+  font-size:14px;
+}
+@media(max-width:600px) {
+  .links {gap:12px;font-size:12px}
+  .hero {min-height:65vh}
+  h1 {letter-spacing:-2px}
+  section {padding:45px 0}
+}
+</style>
 </head>
 <body>
-  <h1>Welcome to My Website</h1>
-  <p>I'm interested in technology,
-     programming, and artificial intelligence.</p>
-  <h2>About Me</h2>
-  <p>This is my personal website where
-     I can share my projects and learning journey.</p>
-  <h2>My Projects</h2>
-  <p>Projects coming soon!</p>
+<div class="container">
+  <nav>
+    <a href="#" class="logo">Khaled<span>.</span></a>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#interests">Interests</a>
+      <a href="#journey">Journey</a>
+    </div>
+  </nav>
+
+  <main>
+    <header class="hero">
+      <div class="eyebrow">Welcome to my digital space</div>
+      <h1>Hi, I'm<br><span class="accent">Khaled Al Ali.</span></h1>
+      <p>
+        Technology enthusiast exploring computer science,
+        artificial intelligence, and the possibilities
+        of modern software.
+      </p>
+      <div class="buttons">
+        <a class="btn primary" href="#about">Explore My Portfolio</a>
+        <a class="btn" href="#interests">My Interests</a>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="eyebrow">01 / About</div>
+      <h2>About Me</h2>
+      <p class="description">
+        I'm Khaled Al Ali, passionate about understanding
+        how technology works and discovering new ways
+        to use it. My interests include computers,
+        programming, artificial intelligence, and
+        emerging digital technologies.
+      </p>
+      <p class="description">
+        I enjoy exploring new tools, solving technical
+        problems, and continuously expanding my knowledge.
+      </p>
+    </section>
+
+    <section id="interests">
+      <div class="eyebrow">02 / Focus Areas</div>
+      <h2>What Interests Me</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="symbol">💻</div>
+          <h3>Computer Science</h3>
+          <p>Exploring software, programming concepts,
+          and how computer systems work.</p>
+        </article>
+        <article class="card">
+          <div class="symbol">🧠</div>
+          <h3>Artificial Intelligence</h3>
+          <p>Learning about AI technologies,
+          intelligent systems, and their potential.</p>
+        </article>
+        <article class="card">
+          <div class="symbol">⚙️</div>
+          <h3>Technology</h3>
+          <p>Discovering digital tools, optimizing
+          systems, and experimenting with technology.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="journey">
+      <div class="eyebrow">03 / My Journey</div>
+      <h2>Learning & Exploring</h2>
+      <p class="description">
+        I'm continuing to develop my understanding of
+        computer science and modern technology.
+        This website is my personal space to document
+        my interests, learning progress, and future projects.
+      </p>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <div class="container">
+    Khaled Al Ali &copy; <span id="year"></span>
+    <div>Built with curiosity and a passion for technology.</div>
+  </div>
+</footer>
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
 </body>
 </html>
